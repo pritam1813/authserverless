@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='main'>
+      <div className='container a-container' id='a-container'>
+        <form className='form' id='a-form' method='' action=''>
+          <h2 className='form_title title'>Create Account</h2>
+          <div className='form__icons'>
+            <img src='' />
+            <img src='' />
+            <img src='' />
+          </div>
+          <span className='form__span'>or use email for registration</span>
+          <input className='form__input' type='text' placeholder='Name' />
+          <input className='form__input' type='text' placeholder='Email' />
+          <input
+            className='form__input'
+            type='password'
+            placeholder='Password'
+          />
+          <button className='form__button button submit'>SIGN UP</button>
+        </form>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className='container b-container' id='b-container'>
+        <form className='form' id='b-form' method='' action=''>
+          <h2 className='form_title title'>Sign in to Website</h2>
+          <div className='form__icons'>
+            <img src='' />
+            <img src='' />
+            <img src='' />
+          </div>
+          <span className='form__span'>or use your email account</span>
+          <input className='form__input' type='text' placeholder='Email' />
+          <input
+            className='form__input'
+            type='password'
+            placeholder='Password'
+          />
+          <a className='form__link'>Forgot your password?</a>
+          <button className='form__button button submit'>SIGN IN</button>
+        </form>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className='switch' id='switch-cnt'>
+        <div className='switch__circle'></div>
+        <div className='switch__circle switch__circle--t'></div>
+        <div className='switch__container' id='switch-c1'>
+          <h2 className='switch__title title'>Welcome Back !</h2>
+          <p className='switch__description description'>
+            To keep connected with us please login with your personal info
+          </p>
+          <button className='switch__button button switch-btn'>SIGN IN</button>
+        </div>
+        <div className='switch__container is-hidden' id='switch-c2'>
+          <h2 className='switch__title title'>Hello Friend !</h2>
+          <p className='switch__description description'>
+            Enter your personal details and start journey with us
+          </p>
+          <button className='switch__button button switch-btn'>SIGN UP</button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
